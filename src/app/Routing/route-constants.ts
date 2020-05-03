@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LandingPageComponent, OnlineResumeComponent } from '../Components';
+import { LandingPageGuard } from './DataGuards/LandingPageGuard';
 
 export const routes: Routes = [ 
     {
@@ -9,7 +10,8 @@ export const routes: Routes = [
     },
     {
         path: 'about-me',
-        component: LandingPageComponent
+        component: LandingPageComponent,
+        canActivate: [LandingPageGuard]
     },
     {
         path: 'resume',
