@@ -1,14 +1,17 @@
 import { createReducer, Action, on, State } from '@ngrx/store'
 import * as AppActions from './actions'
+import { AboutData } from '../Models/AboutData'
 
 export interface AppState {
     firstName: string
     lastName: string
+    aboutData: Array<AboutData>
 }
 
 export const initialState: AppState = {
     firstName: null,
-    lastName: null
+    lastName: null,
+    aboutData: null
 }
 
 const appReducer = createReducer(
@@ -17,6 +20,10 @@ const appReducer = createReducer(
         ...state,
         firstName: payload.firstName,
         lastName: payload.lastName
+    })),
+    on(AppActions.setAboutMeData, (state, payload) => ({
+        ...state,
+        aboutData: [...payload.payload]
     }))
 )
 

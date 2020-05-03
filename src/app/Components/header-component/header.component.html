@@ -1,0 +1,17 @@
+<div class="header-container color-primary" fxLayout="row">
+   <div class="left-container" fxLayout="row">
+        <div>
+            <img class="rounded-img" src="../../../assets/me.png">
+        </div>
+        <div class="name" fxLayout="column">
+            <h1>{{name}}</h1>
+        </div> 
+    </div>
+    <div class="right-container" fxLayout="column">
+        <div class="nav-buttons" fxLayout="row">
+            <ng-container *ngFor="let nav of navOptions; let i=index">
+                <button mat-button [ngClass]="{'selected': i===selectedIndex}" (click)="navTo(nav.route, i)" class="nav-button selected" color="primary">{{nav.label}}</button>
+            </ng-container>
+        </div>
+    </div>
+</div>

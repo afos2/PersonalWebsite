@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+@import '~@angular/material/theming';
+@include mat-core();
+
+$purple: #673ab7;
+
+.header-container {
+    padding: 3rem;
+    color: white;
+    background: linear-gradient(to bottom, $purple 50%, white 50%);
+    justify-content: space-between;
+
+
+    .rounded-img {
+        width: 15rem;
+        border-radius: 50%;
+    }
+    .name {
+        margin-left: 1rem;
+        justify-content: space-evenly;
+        h1 {
+            font-size: 4rem;
+            margin-bottom:2.5rem;
+        }
+    }
+
+    .right-container {
+        justify-content: flex-end;
+        .nav-buttons {
+            .nav-button {
+                border-bottom: 0.2rem solid $purple;
+                border-radius: 0;
+                width: 20rem;
+            }
+            .selected {
+                background-color: rgba($color: $purple, $alpha: 0.1);
+            }
+        }
+    }
+}
+
