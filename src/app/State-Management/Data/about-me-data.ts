@@ -11,6 +11,6 @@ export const meData: Array<AboutData> = [
     },
     {
         header: "Personal Summary",
-        content: "I am married with two dogs. I have a long list of hobbies! My list changes, but currently my list includes woodworking, exercising, fishing, and aquariums."
+        content: "I married my high school sweet heart and we have two dogs. I have a long list of hobbies! My list changes, but currently my list includes woodworking, exercising, fishing, and aquariums."
     }
 ]
